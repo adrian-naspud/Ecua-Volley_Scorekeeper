@@ -1,6 +1,7 @@
 const p1 = {
     score: 0,
     button: document.querySelector('#p1Button'),
+    buttonNegative: document.querySelector('#p1Button-negative'),
     display: document.querySelector('#p1Display'),
     label: document.querySelector('#p1label'),
     server: document.querySelector('#p1Serves')
@@ -8,6 +9,7 @@ const p1 = {
 const p2 = {
     score: 0,
     button: document.querySelector('#p2Button'),
+    buttonNegative: document.querySelector('#p2Button-negative'),
     display: document.querySelector('#p2Display'),
     label: document.querySelector('#p2label'),
     server: document.querySelector('#p2Serves')
@@ -73,6 +75,37 @@ p2.button.addEventListener('click', function () {
     };
 })
 
+function updateScoresNegative(player) {
+    if (!isGameOver && player.score > 0) {
+        player.score -= 1;
+        // if (player.score === winningScore) {
+        //     isGameOver = true;
+        //     player.display.classList.add('green-text');
+        //     opponent.display.classList.add('red-text');
+        //     player.label.classList.add('green-text');
+        //     opponent.label.classList.add('red-text');
+        //     player.button.disabled = true;
+        //     opponent.button.disabled = true;
+        // }
+        player.display.textContent = player.score;
+    }
+}
+
+p1.buttonNegative.addEventListener('click', function () {
+    updateScoresNegative(p1);
+    if (p1.score === winningScore - 1 && p2.score === winningScore - 1) {
+        winningScore++;
+        wScore.innerHTML = (`${winningScore}`);
+
+    };
+})
+p2.buttonNegative.addEventListener('click', function () {
+    updateScoresNegative(p2);
+    if (p2.score === winningScore - 1 && p1.score === winningScore - 1) {
+        winningScore++;
+        wScore.innerHTML = (`${winningScore}`);
+    };
+})
 
 winningScoreSelect.addEventListener('change', function () {
     winningScore = parseInt(this.value);
