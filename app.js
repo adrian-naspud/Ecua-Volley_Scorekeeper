@@ -131,4 +131,6 @@ function reset() {
     winningScoreSelect.selectedIndex = 0;
     winningScore = 10;
     wScore.innerHTML = (`${winningScore}`);
+    p1.button.classList.remove('disabled');
+    p2.button.classList.add('disabled');
 }
