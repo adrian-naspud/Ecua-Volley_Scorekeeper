@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  background-color: rgb(1, 1, 37);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.volleyImg {
+  width: 200px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+}
+
+.playerlabels {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 0;
+  font-size: 28px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.content {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.display {
+  padding: 0 20px;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  font-size: 36px;
+}
+
+.select {
+  font-size: 36px;
+  background-color: rgb(1, 1, 37);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: #570c0c;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  border: solid 2px rgba(255, 251, 0, 0.671);
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-players {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pButton {
+  width: 47%;
+  margin: 20px 0 0;
+}
+
+.active {
+  background-color: rgba(255, 251, 0, 0.671);
+}
+
+.disabled {
+  background-color: #2b0606;
+}
+
+.resetButton {
+  margin: 20px 0;
+}
+
+.footer-server {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.mt-20 {
+  margin: 20px 0 0;
+}
